@@ -27,6 +27,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <header className="">
+          <h1 className="audiowide-regular">Next WorldBuilder</h1>
+        </header>
         {children}
       </body>
     </html>
