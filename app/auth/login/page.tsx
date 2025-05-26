@@ -33,7 +33,7 @@ export default async function SignInPage(props: {
                 <input type="submit" value="Sign In" />
             </form>
             {Object.values(providerMap).map((provider) => (
-                <form
+                <form key={(provider.id)}
                     action={async () => {
                         "use server"
                         try {
