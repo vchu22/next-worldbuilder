@@ -1,7 +1,7 @@
 import { AuthError } from "next-auth"
 import { redirect } from "next/navigation"
 import { Button, Input, Label } from "@/components/ui"
-import { signIn } from "@/lib/auth.ts";
+import { signIn } from "@/lib/auth";
 
 const CredentialsForm = ({ signin_error_url }: { signin_error_url: String }) => {
     return (
@@ -24,7 +24,6 @@ const CredentialsForm = ({ signin_error_url }: { signin_error_url: String }) => 
             <Input type="email" placeholder="Email" id="email"></Input>
             <Label htmlFor="password" className="block">
                 Password
-                <input name="password" id="password" />
             </Label>
             <Input type="password" placeholder="Password" id="password"></Input>
 

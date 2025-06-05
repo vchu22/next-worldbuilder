@@ -3,7 +3,7 @@ import { AuthError } from "next-auth"
 import Image from "next/image";
 import { Button } from "@/components/ui"
 
-import { signIn, auth, providerMap } from "@/lib/auth.ts"
+import { signIn, auth, providerMap } from "@/lib/auth"
 
 type OAuthFormProps = {
     searchParams: { callbackUrl: string | undefined },
