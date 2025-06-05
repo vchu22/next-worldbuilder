@@ -1,6 +1,10 @@
 # Next WorldBuilder
 A collaborative worldbuilding tool built with Next.js.
 
+## Libraries Used
+- UI Components: [shadcn](https://ui.shadcn.com/)
+- Login Authentication: [NextAuth.js](https://next-auth.js.org/)
+
 ## Getting Started
 
 First, run the development server:
