@@ -6,7 +6,7 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
-
+import { Separator } from "@/components/ui"
 import CredentialsForm from './credentials-form';
 import OAuthForm from "./oauth-form";
 
@@ -23,7 +23,8 @@ export default async function SignInPage(props: {
                     <CardDescription>Card Description</CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <CredentialsForm signin_error_url={SIGNIN_ERROR_URL} />
+                    <CredentialsForm searchParams={props.searchParams} signin_error_url={SIGNIN_ERROR_URL} />
+                    <Separator className="my-4" />
                     <OAuthForm searchParams={props.searchParams} signin_error_url={SIGNIN_ERROR_URL} />
                 </CardContent>
                 <CardFooter>
