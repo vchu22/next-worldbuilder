@@ -23,13 +23,13 @@ export default async function SignInPage(props: {
                     <CardDescription>Card Description</CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <CredentialsForm searchParams={props.searchParams} signin_error_url={SIGNIN_ERROR_URL} />
+                    <CredentialsForm signin_error_url={SIGNIN_ERROR_URL} />
                     <Separator className="my-4" />
                     <OAuthForm searchParams={props.searchParams} signin_error_url={SIGNIN_ERROR_URL} />
                 </CardContent>
                 <CardFooter>
                     <p>Forgot Password?</p>
-                    <p>Don't have an account? <a href="">Sign up</a></p>
+                    <p>Don&#39;t have an account? <a href="">Sign up</a></p>
                 </CardFooter>
             </Card>
         </div>

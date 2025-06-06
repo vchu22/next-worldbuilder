@@ -7,7 +7,7 @@ import { signIn, auth, providerMap } from "@/lib/auth"
 
 type OAuthFormProps = {
     searchParams: { callbackUrl: string | undefined },
-    signin_error_url: String
+    signin_error_url: string
 };
 
 export default function OAuthForm({ searchParams, signin_error_url }: OAuthFormProps) {

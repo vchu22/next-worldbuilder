@@ -3,7 +3,7 @@ import { redirect } from "next/navigation"
 import { Button, Input, Label } from "@/components/ui"
 import { signIn } from "@/lib/auth";
 
-const CredentialsForm = ({ signin_error_url }: { signin_error_url: String }) => {
+const CredentialsForm = ({ signin_error_url }: { signin_error_url: string }) => {
     return (
         <form
             action={async (formData) => {
