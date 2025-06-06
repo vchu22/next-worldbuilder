@@ -1,5 +1,5 @@
 import NextAuth from "next-auth"
-import { Google, GitHub, Auth0 } from "./authProviders";
+import { Apple, Google, GitHub, Discord, Auth0 } from "./authProviders";
 import Credentials from "next-auth/providers/credentials"
 import type { Provider } from "next-auth/providers"
 
@@ -27,7 +27,9 @@ const providers: Provider[] = [
         },
     }),
     Google,
+    Apple,
     GitHub,
+    Discord,
     Auth0
 ]
 
