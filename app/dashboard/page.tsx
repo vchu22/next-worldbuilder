@@ -1,12 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardTitle,
-} from "@/components/ui/card"
-import {Button} from "@/components/ui";
+import { Card, CardContent, CardDescription, CardTitle,Button } from "@/components/ui";
 
 const projects = [
     {"project_id": 1234, "title": "Space Travel", "description": "A sci-fi novel about intergalactic travel.", "img_banner": "https://images.pexels.com/photos/956981/milky-way-starry-sky-night-sky-star-956981.jpeg" },
