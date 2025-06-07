@@ -18,12 +18,12 @@ const Page = () => {
                 <h3>Projects</h3>
                 <Button className="mr-28">Add Project</Button>
             </div>
-            <div className="flex flex-row flex-wrap justify-items-start p-5">
+            <div className="flex flex-row flex-wrap justify-center p-5">
                 {projects.length>0? projects.map((project) => (
                     <Link key={project.project_id} href={`/project/${project.project_id}`} passHref className="mx-2 my-4">
                         <Card className="w-2xs">
                                 <Image src={project.img_banner} width={0} height={0} layout="responsive" alt=""/>
-                                <CardContent className="">
+                                <CardContent className="flex flex-col gap-2">
                                     <CardTitle>{project.title}</CardTitle>
                                     <CardDescription>{project.description}</CardDescription>
                                 </CardContent>

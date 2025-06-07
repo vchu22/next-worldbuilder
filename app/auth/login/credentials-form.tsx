@@ -5,7 +5,7 @@ import { signIn } from "@/lib/auth";
 
 const CredentialsForm = ({ signin_error_url }: { signin_error_url: string }) => {
     return (
-        <form
+        <form className="grid grid-rows-1 gap-2"
             action={async (formData) => {
                 "use server"
                 try {
@@ -29,7 +29,7 @@ const CredentialsForm = ({ signin_error_url }: { signin_error_url: string }) => 
             </Label>
             <Input type="password" placeholder="Password" id="password"></Input>
 
-            <Button type="submit">Sign In</Button>
+            <Button className="mt-2" type="submit">Sign In</Button>
         </form>
     )
 }

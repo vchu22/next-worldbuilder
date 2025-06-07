@@ -12,7 +12,7 @@ type OAuthFormProps = {
 export default function OAuthForm({ signin_error_url }: OAuthFormProps) {
 
     return Object.values(providerMap).map((provider) => (
-        <form key={(provider.id)}
+        <form key={(provider.id)} className="grid grid-rows-[45px]"
             action={async () => {
                 "use server"
                 try {
