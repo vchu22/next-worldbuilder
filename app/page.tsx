@@ -1,23 +1,18 @@
 'use client';
-import { useSession } from "next-auth/react";
 import Image from "next/image";
+import { redirect } from "next/navigation";
+import { useSession } from "next-auth/react";
 
 export default function Home() {
   const { data: session } = useSession();
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start w-md">
-        {session ? <LoggedInView /> : <LoggedOutView />}
+        {session ? redirect('/dashboard') : <LoggedOutView />}
       </main>
     </div>
   );
 }
-
-const LoggedInView = () => (
-  <>
-    You have successfully logged in!
-  </>
-)
 
 const LoggedOutView = () => (
   <>

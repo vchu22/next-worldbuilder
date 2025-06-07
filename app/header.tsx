@@ -10,7 +10,7 @@ const PageHeader = async () => {
             {session? <form
                 action={async () => {
                     "use server"
-                    await signOut()
+                    await signOut({ redirectTo: "/auth/logout"})
                 }}
             >
                 <Button type="submit">Sign Out</Button>

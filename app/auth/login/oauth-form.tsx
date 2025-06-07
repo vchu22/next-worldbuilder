@@ -3,14 +3,13 @@ import { AuthError } from "next-auth"
 import Image from "next/image";
 import { Button } from "@/components/ui"
 
-import { signIn, auth, providerMap } from "@/lib/auth"
+import { signIn, providerMap } from "@/lib/auth"
 
 type OAuthFormProps = {
-    searchParams: { callbackUrl: string | undefined },
     signin_error_url: string
 };
 
-export default function OAuthForm({ searchParams, signin_error_url }: OAuthFormProps) {
+export default function OAuthForm({ signin_error_url }: OAuthFormProps) {
 
     return Object.values(providerMap).map((provider) => (
         <form key={(provider.id)}
@@ -18,7 +17,7 @@ export default function OAuthForm({ searchParams, signin_error_url }: OAuthFormP
                 "use server"
                 try {
                     await signIn(provider.id, {
-                        redirectTo: searchParams?.callbackUrl ?? "",
+                        redirectTo: "/dashboard",
                     })
                 } catch (error) {
                     // Signin can fail for a number of reasons, such as the user

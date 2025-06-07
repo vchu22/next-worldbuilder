@@ -12,9 +12,7 @@ import OAuthForm from "./oauth-form";
 
 const SIGNIN_ERROR_URL = "/error"
 
-export default async function SignInPage(props: {
-    searchParams: { callbackUrl: string | undefined }
-}) {
+export default async function SignInPage() {
     return (
         <div className="flex flex-col gap-2">
             <Card>
@@ -25,7 +23,7 @@ export default async function SignInPage(props: {
                 <CardContent>
                     <CredentialsForm signin_error_url={SIGNIN_ERROR_URL} />
                     <Separator className="my-4" />
-                    <OAuthForm searchParams={props.searchParams} signin_error_url={SIGNIN_ERROR_URL} />
+                    <OAuthForm signin_error_url={SIGNIN_ERROR_URL} />
                 </CardContent>
                 <CardFooter>
                     <p>Forgot Password?</p>

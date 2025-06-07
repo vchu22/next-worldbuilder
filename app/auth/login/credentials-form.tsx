@@ -9,7 +9,9 @@ const CredentialsForm = ({ signin_error_url }: { signin_error_url: string }) => 
             action={async (formData) => {
                 "use server"
                 try {
-                    await signIn("credentials", formData)
+                    await signIn("credentials", formData, {
+                        redirectTo: "/dashboard",
+                    })
                 } catch (error) {
                     if (error instanceof AuthError) {
                         return redirect(`${signin_error_url}?error=${error.type}`)
