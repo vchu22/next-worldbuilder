@@ -1,10 +1,10 @@
-import { authClient } from "@/lib/auth-client";
+import { signUp } from "@/lib/auth-client";
 
 export async function POST(req: Request) {
     const { email, password, name, image, callbackURL } = await req.json();
 
     try {
-        const { data, error } = await authClient.signUp.email(
+        const { data, error } = await signUp.email(
             {
                 email,
                 password,
