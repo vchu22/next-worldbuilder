@@ -16,8 +16,8 @@ export default async function SignInPage() {
                 <CredentialsForm signin_error_url={SIGNIN_ERROR_URL}/>
                 <Separator className="my-4"/>
                 <OAuthForm signin_error_url={SIGNIN_ERROR_URL}/>
-                <Separator className="mt-2"/>
             </CardContent>
+            <Separator className="mt-2"/>
             <CardFooter className="grid grid-rows-1 gap-2">
                 <p>Forgot Password? <Link className="link" href="/auth/reset">Reset</Link></p>
                 <p>Don&#39;t have an account? <Link className="link" href="/auth/signup">Sign up</Link></p>

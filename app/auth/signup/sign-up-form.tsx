@@ -75,7 +75,7 @@ export function SignUpForm() {
             <Separator className="mt-2"/>
             <CardFooter className="grid grid-rows-1 gap-2">
                 <p>Forgot Password? <Link className="link" href="/auth/reset">Reset</Link></p>
-                <p>Already have an account? <Link className="link" href="/auth/signup">Log in</Link></p>
+                <p>Already have an account? <Link className="link" href="/auth/login">Log in</Link></p>
             </CardFooter>
         </Card>
     );
