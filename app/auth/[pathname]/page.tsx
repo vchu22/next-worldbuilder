@@ -10,10 +10,13 @@ export function generateStaticParams() {
 
 export default async function AuthPage({ params }: { params: Promise<{ pathname: string }> }) {
     const { pathname } = await params
+    const sessionData = await auth.api.getSession({ headers: await headers() })
 
     if (pathname === "settings") {
-        const sessionData = await auth.api.getSession({ headers: await headers() })
         if (!sessionData) redirect("/auth/sign-in?redirectTo=/auth/settings")
+    }
+    else if (pathname === "sign-in") {
+        if (sessionData) redirect("/dashboard")
     }
 
     return <AuthView pathname={pathname} />
