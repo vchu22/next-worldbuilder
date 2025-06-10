@@ -1,11 +1,18 @@
+import PageHeader from "@/app/header";
+import PageFooter from "@/app/footer";
+
 export default function AuthLayout({
     children,
 }: {
     children: React.ReactNode
 }) {
     return (
-        <main className="w-2xl m-auto block">
-            {children}
-        </main>
+        <>
+            <PageHeader/>
+            <main className="w-2xl m-auto block">
+                {children}
+            </main>
+            <PageFooter/>
+        </>
     )
 }

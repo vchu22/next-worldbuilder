@@ -1,17 +1,24 @@
 'use client';
 import Image from "next/image";
-import { redirect } from "next/navigation";
-import { useSession } from "@/lib/auth-client"
+import PageHeader from "@/app/header";
+import PageFooter from "@/app/footer";
+import Link from "next/link";
+// import { useSession } from "@/lib/auth-client"
 
 export default function Home() {
-  const session = useSession();
+  // const session = useSession();
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] justify-items-center p-8 sm:p-16 pb-16 gap-16">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start w-full sm:w-md">
-        {session ? redirect('/dashboard') : <LoggedOutView />}
-      </main>
-    </div>
+      <>
+          <PageHeader/>
+          <div className="grid grid-rows-[20px_1fr_20px] justify-items-center p-8 sm:p-16 pb-16 gap-16">
+              <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start w-full sm:w-md">
+                  {/*{session ? redirect('/dashboard') : <LoggedOutView />}*/}
+                  <LoggedOutView/>
+              </main>
+          </div>
+          <PageFooter/>
+      </>
   );
 }
 
@@ -20,9 +27,9 @@ const LoggedOutView = () => (
     <p>A worldbuilding tool that allows fiction writers and video game designers to easily organize of worldbuilding concepts and collaborate with others in real-time.</p>
 
     <div className="flex gap-4 items-center flex-col sm:flex-row">
-      <a
+      <Link
         className="themed-btn primary"
-        href="auth/login/"
+        href="/auth/sign-in/"
         rel="noopener noreferrer"
       >
         <Image
@@ -33,14 +40,14 @@ const LoggedOutView = () => (
           height={20}
         />
         Login
-      </a>
-      <a
+      </Link>
+      <Link
         className="themed-btn secondary"
-        href="guide/"
+        href="/guide/"
         rel="noopener noreferrer"
       >
         Documentation
-      </a>
+      </Link>
     </div>
   </>
 )

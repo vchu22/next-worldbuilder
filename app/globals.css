@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
-@import "tailwindcss";
 @import "tw-animate-css";
+@import "tailwindcss";
+@source "@/node_modules/@daveyplate/better-auth-ui";
 
 @custom-variant dark (&:is(.dark *));
 
