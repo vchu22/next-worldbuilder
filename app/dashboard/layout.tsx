@@ -9,7 +9,7 @@ export default function AuthLayout({
     return (
         <>
             <PageHeader/>
-            <main className="w-2xl m-auto block">
+            <main className="m-auto block">
                 {children}
             </main>
             <PageFooter/>
