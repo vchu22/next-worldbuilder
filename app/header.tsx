@@ -4,6 +4,7 @@ import { useTheme } from 'next-themes'
 import SignOutButton from "@/components/signout-button";
 import { Button } from "@/components/ui";
 import Icon from "@/components/icon"
+import { LangDropdownMenu } from "@/components/lang-dropdown";
 
 const PageHeader = () => {
     const { theme, setTheme } = useTheme()
@@ -13,6 +14,7 @@ const PageHeader = () => {
             <Button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
                 <Icon name={theme === 'dark' ? "DarkMode" : "LightMode"} /> {theme === 'dark' ? "Dark" : "Light"}
             </Button>
+            <LangDropdownMenu/>
             <SignedIn>
                 <SignOutButton/>
             </SignedIn>
