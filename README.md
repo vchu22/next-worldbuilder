@@ -3,7 +3,8 @@ A collaborative worldbuilding tool built with Next.js.
 
 ## Libraries Used
 - UI Components: [shadcn](https://ui.shadcn.com/)
-- Login Authentication: [NextAuth.js](https://next-auth.js.org/)
+- Login Authentication: [Better Auth](https://www.better-auth.com) & [Better Auth UI](https://better-auth-ui.com/)
+- ORM: [Prisma](https://www.prisma.io/)
 
 ## Getting Started
 
