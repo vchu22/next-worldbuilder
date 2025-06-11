@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ThemeProvider } from 'next-themes'
 import { Geist, Geist_Mono } from "next/font/google";
 import { Providers } from "@/components/providers"
 
@@ -25,10 +26,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-dvh max-w-[97vw] flex flex-col justify-between`}>
-        <Providers>{children}</Providers>
-      </body>
-    </html>
+      <html lang="en" suppressHydrationWarning>
+          <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-dvh max-w-[97vw] flex 
+                flex-col justify-between`}>
+              <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+                  <Providers>{children}</Providers>
+              </ThemeProvider>
+          </body>
+      </html>
   );
 }

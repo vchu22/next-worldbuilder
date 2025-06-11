@@ -1,5 +1,15 @@
-.auth-card [data-slot="separator-root"] {
-    background-color: lightgray;
-    height: 2px;
-    width: 0;
+.auth-card {
+    [data-slot="separator-root"] {
+        background-color: lightgray;
+        height: 2px;
+        width: 0;
+    }
+    button[data-slot="button"] {
+        & > svg:first-child {
+            @apply inline-block;
+        }
+        & > svg:nth-child(2) {
+            @apply hidden;
+        }
+    }
 }
