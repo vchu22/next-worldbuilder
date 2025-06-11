@@ -2,9 +2,9 @@ import { betterAuth } from "better-auth";
 import { prismaAdapter } from "better-auth/adapters/prisma";
 // If your Prisma file is located elsewhere, you can change the path
 import { PrismaClient } from "@/generated/prisma";
-// import { PrismaClient } from "@prisma/client";
-
+import { enabledOAuthProviders, getProviderKeys } from "@/lib/oauth-providers";
 const prisma = new PrismaClient();
+
 export const auth = betterAuth({
     database: prismaAdapter(prisma, {
         provider: "postgresql",
@@ -12,10 +12,5 @@ export const auth = betterAuth({
     emailAndPassword: {
         enabled: true
     },
-    // socialProviders: {
-    //     github: {
-    //         clientId: process.env.GITHUB_CLIENT_ID as string,
-    //         clientSecret: process.env.GITHUB_CLIENT_SECRET as string,
-    //     },
-    // },
+    socialProviders: getProviderKeys(enabledOAuthProviders),
 });
