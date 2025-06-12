@@ -9,6 +9,7 @@ import {useTranslations} from "next-intl";
 
 export function Providers({ children }: { children: ReactNode }) {
     const router = useRouter()
+    const tCommon = useTranslations("auth.common")
     const tSignUp = useTranslations("auth.signUpForm");
     const tSignIn = useTranslations("auth.signInForm");
     const tForgotPass = useTranslations("auth.forgotPasswordForm");
@@ -33,10 +34,6 @@ export function Providers({ children }: { children: ReactNode }) {
 
                 signIn: tSignIn('signIn'),
                 signInDescription: tSignIn('signInDescription'),
-                email: tSignIn('email'),
-                emailPlaceholder: "jdoe@example.com",
-                password: tSignIn('password'),
-                passwordPlaceholder: "********",
                 forgotPasswordLink: tSignIn('forgotPasswordLink'),
                 signInAction: tSignIn('signInAction'),
                 orContinueWith: tSignIn('orContinueWith'),
@@ -46,7 +43,16 @@ export function Providers({ children }: { children: ReactNode }) {
                 forgotPassword: tForgotPass('forgotPassword'),
                 forgotPasswordDescription: tForgotPass('forgotPasswordDescription'),
                 forgotPasswordAction: tForgotPass('forgotPasswordAction'),
-                goBack: tForgotPass('goBack')
+                goBack: tForgotPass('goBack'),
+
+                email: tCommon('email'),
+                emailPlaceholder: "jdoe@example.com",
+                password: tCommon('password'),
+                passwordPlaceholder: "********",
+                isInvalid: tCommon('isInvalid'),
+                isRequired: tCommon('isRequired'),
+                emailRequired: tCommon('emailRequired'),
+                passwordRequired: tCommon('passwordRequired'),
             }}
         >
             {children}

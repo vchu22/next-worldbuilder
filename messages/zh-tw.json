@@ -1,8 +1,4 @@
 {
-  "metadata": {
-    "title": "Next Worldbuilder",
-    "description": "A NextJS-based worldbuilding platform"
-  },
   "component": {
     "darkModeSwitch": {
       "dark": "暗色",
@@ -28,8 +24,6 @@
     "signInForm": {
       "signIn": "登入帳戶",
       "signInDescription": "輸入您的電子郵件地址和密碼以登入帳戶。",
-      "email": "電子郵件地址",
-      "password": "密碼",
       "forgotPasswordLink": "忘了密碼?",
       "signInAction": "登入",
       "orContinueWith": "或用以下方式登入",
@@ -41,6 +35,14 @@
       "forgotPasswordDescription": "輸入您的電子郵件地址以收到密碼重設連結。",
       "forgotPasswordAction": "發送密碼重設連結",
       "goBack": "返回"
+    },
+    "common": {
+      "email": "電子郵件地址",
+      "password": "密碼",
+      "isInvalid": "無效",
+      "isRequired": "必填",
+      "emailRequired": "電子郵件地址 必填",
+      "passwordRequired": "填寫密碼 必填"
     }
   }
 }
