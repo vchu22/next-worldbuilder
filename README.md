@@ -1,15 +1,34 @@
 # Next WorldBuilder
-A collaborative worldbuilding tool built with Next.js.
+A collaborative worldbuilding web app built with Next.js.
 
-## Libraries Used
-- UI Components: [shadcn](https://ui.shadcn.com/)
-- Login Authentication: [Better Auth](https://www.better-auth.com) & [Better Auth UI](https://better-auth-ui.com/)
-- ORM: [Prisma](https://www.prisma.io/)
+## Technologies Used
+- [Next.js](https://nextjs.org/) + Tailwind CSS + TypeScript
+  - UI Components: [shadcn](https://ui.shadcn.com/)
+  - Login Authentication: [Better Auth](https://www.better-auth.com) & [Better Auth UI](https://better-auth-ui.com/)
+  - ORM: [Prisma](https://www.prisma.io/)
+  - Internationalization: [next-intl](https://next-intl.dev/)
+- Database: [PostgreSQL](https://www.postgresql.org/)
 
-## Getting Started
+## Starting the Application
+To be able to run the project, you need to have [Node.js](https://nodejs.org/en), Next.js, and PostgreSQL installed.
+Afterward, set up the database schema by executing the lastest `migration.sql` file inside the `/prisma/migrations/[lastest_migration]/`.
 
-First, run the development server:
+Install all the necessary dependencies using one of the following commends depending on the package manager you want to use:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
 
+If you want to run it locally, rename `.env.example` to `.env` and fill in the values of your secret keys 
+and connection strings. Otherwise, if you want to deploy the server, make sure your "Environment variables" settings 
+have the variables listed in `.env.example`.
+
+Finally, after everything is set up, you can run the server by executing:
 ```bash
 npm run dev
 # or
@@ -21,13 +40,3 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
