@@ -7,8 +7,10 @@ export const iconLinks : { [key: string]: string } = {
     "DarkMode": "https://api.iconify.design/material-symbols:moon-stars-rounded.svg",
 }
 
-export default function Icon({name, width = 20, height = 20}: {name: string, width?: number, height?: number}) {
+export default function Icon({name, width = 20, height = 20, invertColor = false}:
+        {name: string, width?: number, height?: number, invertColor?: boolean}) {
     return (
-        <Image src={iconLinks[name]} alt="Icon" width={width} height={height} className="invert dark:invert-0" />
+        <Image src={iconLinks[name]} alt="Icon" width={width} height={height}
+               className={invertColor? "dark:invert invert-0": "invert dark:invert-0"} />
     );
 }
