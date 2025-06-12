@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "title": "Next Worldbuilder",
+    "description": "A NextJS-based worldbuilding platform"
+  },
+  "component": {
+    "darkModeSwitch": {
+      "dark": "Dark",
+      "light": "Light"
+    },
+    "langMenu": {
+      "language": "Language"
+    }
+  },
+  "home": {
+    "p1": "A tool that helps storytellers, game developers, and creatives of all kinds easily organize their worldbuilding concepts and collaborate in real time.",
+    "getStarted": "Get Started",
+    "guide": "Guide"
+  },
+  "auth": {
+    "signUpForm": {
+      "signUp": "Create Account",
+      "signUpDescription": "Enter your information to create an account.",
+      "name": "Name",
+      "signUpAction": "Create an Account",
+      "alreadyHaveAnAccount": "Already have an account?"
+    },
+    "signInForm": {
+      "signIn": "Login",
+      "signInDescription": "Enter your email below to login to your account.",
+      "email": "Email",
+      "password": "Password",
+      "forgotPasswordLink": "Forgot Password?",
+      "signInAction": "Login",
+      "orContinueWith": "Or continue with",
+      "signInWith": "Sign in with",
+      "dontHaveAnAccount": "Don't have an account?"
+    },
+    "forgotPasswordForm": {
+      "forgotPassword": "Reset Password",
+      "forgotPasswordDescription": "Enter your email address to receive your password reset link.",
+      "forgotPasswordAction": "Send Reset Link",
+      "goBack": "Go Back"
+    }
+  }
+}

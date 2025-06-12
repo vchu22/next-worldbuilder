@@ -16,5 +16,31 @@
     "p1": "一款專為編寫小說、遊戲開發等各類故事製作設計的工具，可幫助整理世界觀構想和進行多人即時合作。",
     "getStarted": "開始使用",
     "guide": "指南"
+  },
+  "auth": {
+    "signUpForm": {
+      "signUp": "建立帳戶",
+      "signUpDescription": "輸入您的個人信息以建立帳戶。",
+      "name": "名稱",
+      "signUpAction": "建立新帳戶",
+      "alreadyHaveAnAccount": "已經有帳戶了?"
+    },
+    "signInForm": {
+      "signIn": "登入帳戶",
+      "signInDescription": "輸入您的電子郵件地址和密碼以登入帳戶。",
+      "email": "電子郵件地址",
+      "password": "密碼",
+      "forgotPasswordLink": "忘了密碼?",
+      "signInAction": "登入",
+      "orContinueWith": "或用以下方式登入",
+      "signInWith": "登入",
+      "dontHaveAnAccount": "沒有帳戶嗎?"
+    },
+    "forgotPasswordForm": {
+      "forgotPassword": "重設密碼",
+      "forgotPasswordDescription": "輸入您的電子郵件地址以收到密碼重設連結。",
+      "forgotPasswordAction": "發送密碼重設連結",
+      "goBack": "返回"
+    }
   }
 }

@@ -7,13 +7,13 @@ import { DropdownMenu, DropdownMenuRadioGroup, DropdownMenuContent, DropdownMenu
     DropdownMenuTrigger, DropdownMenuRadioItem } from "@/components/ui/dropdown-menu"
 
 const langLabels : { [key: string]: string } = {
-    "en": "English",
+    "en-us": "English",
     "zh-tw": "中文繁體",
 }
 
 export function LangDropdownMenu() {
     const t = useTranslations("component.langMenu");
-    const [locale, setLocale] = useState("en")
+    const [locale, setLocale] = useState("en-us")
     const changeLocale = (newLocale: string) => {
         setLocale(newLocale);
         document.cookie = `NEXT_WORLDBUILDER_LOCALE=${newLocale};`;
@@ -27,7 +27,6 @@ export function LangDropdownMenu() {
         if (cookieLocale) {
             setLocale(cookieLocale);
         } else {
-            console.log("Language", navigator.language);
             const browserLocale = navigator.language.toLowerCase();
             changeLocale(browserLocale);
         }
@@ -36,7 +35,7 @@ export function LangDropdownMenu() {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <Button variant="outline" className="font-bold">{langLabels[locale]}</Button>
+                <Button variant="outline" className="font-bold">{locale.toUpperCase()}</Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56">
                 <DropdownMenuLabel>{t('language')}</DropdownMenuLabel>
@@ -44,7 +43,7 @@ export function LangDropdownMenu() {
                 <DropdownMenuRadioGroup value={locale} onValueChange={changeLocale}>
                     {Object.keys(langLabels).map(lang =>
                         <DropdownMenuRadioItem key={lang} value={lang}>
-                            {langLabels[lang]}
+                            {langLabels[lang]} ({lang})
                         </DropdownMenuRadioItem>
                     )}
                 </DropdownMenuRadioGroup>
