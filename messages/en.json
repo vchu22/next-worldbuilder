@@ -1,0 +1,20 @@
+{
+  "metadata": {
+    "title": "Next Worldbuilder",
+    "description": "A NextJS-based worldbuilding platform"
+  },
+  "component": {
+    "darkModeSwitch": {
+      "dark": "Dark",
+      "light": "Light"
+    },
+    "langMenu": {
+      "language": "Language"
+    }
+  },
+  "home": {
+    "p1": "A tool that helps storytellers, game developers, and creatives of all kinds easily organize their worldbuilding concepts and collaborate in real time.",
+    "getStarted": "Get Started",
+    "guide": "Guide"
+  }
+}

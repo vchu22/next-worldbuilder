@@ -1,0 +1,20 @@
+{
+  "metadata": {
+    "title": "Next Worldbuilder",
+    "description": "A NextJS-based worldbuilding platform"
+  },
+  "component": {
+    "darkModeSwitch": {
+      "dark": "暗色",
+      "light": "亮色"
+    },
+    "langMenu": {
+      "language": "語言"
+    }
+  },
+  "home": {
+    "p1": "一款專為編寫小說、遊戲開發等各類故事製作設計的工具，可幫助整理世界觀構想和進行多人即時合作。",
+    "getStarted": "開始使用",
+    "guide": "指南"
+  }
+}

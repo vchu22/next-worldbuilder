@@ -1,6 +1,6 @@
 import { SignedIn } from "@daveyplate/better-auth-ui";
 import SignOutButton from "@/components/signout-button";
-import { LangDropdownMenu } from "@/components/lang-dropdown";
+import { LangDropdownMenu } from "@/components/lang-menu";
 import { DarkModeSwitchButton } from "@/components/dark-mode-switch";
 
 const PageHeader = () => {
