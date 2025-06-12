@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages } from "next-intl/server";
 import { ThemeProvider } from 'next-themes'
 import { Geist, Geist_Mono } from "next/font/google";
 import { Providers } from "@/components/providers"
-
 import "./globals.css";
 
 const geistSans = Geist({
@@ -20,19 +21,23 @@ export const metadata: Metadata = {
   description: "A NextJS-based worldbuilding platform.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-      <html lang="en" suppressHydrationWarning>
-          <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-dvh max-w-[97vw] flex 
+    const messages = await getMessages();
+    const locale = await getLocale();
+    return (
+        <html lang={locale} suppressHydrationWarning>
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-dvh max-w-[97vw] flex 
                 flex-col justify-between`}>
-              <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-                  <Providers>{children}</Providers>
-              </ThemeProvider>
-          </body>
-      </html>
-  );
+        <NextIntlClientProvider messages={messages}>
+            <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+                <Providers>{children}</Providers>
+            </ThemeProvider>
+        </NextIntlClientProvider>
+        </body>
+        </html>
+    );
 }
