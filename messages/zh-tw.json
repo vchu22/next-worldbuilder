@@ -42,7 +42,12 @@
       "isInvalid": "無效",
       "isRequired": "必填",
       "emailRequired": "電子郵件地址 必填",
-      "passwordRequired": "填寫密碼 必填"
+      "passwordRequired": "填寫密碼 必填",
+      "signOut": "登出"
     }
+  },
+  "dashboard": {
+    "titleProjects": "專案",
+    "addProject": "新增專案"
   }
 }

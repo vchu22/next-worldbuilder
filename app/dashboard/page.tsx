@@ -1,3 +1,4 @@
+import {useTranslations} from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent, CardDescription, CardTitle,Button } from "@/components/ui";
@@ -12,11 +13,12 @@ const projects = [
 ]
 
 const Page = () => {
+    const t = useTranslations("dashboard");
     return (
         <main className="px-5">
             <div className="w-full min-sm:flex min-sm:items-center min-sm:justify-between gap-8 ml-8">
-                <h3>Projects</h3>
-                <Button className="mr-28">Add Project</Button>
+                <h3>{t('titleProjects')}</h3>
+                <Button className="mr-28">{t('addProject')}</Button>
             </div>
             <div className="flex flex-row flex-wrap justify-center p-5">
                 {projects.length>0? projects.map((project) => (

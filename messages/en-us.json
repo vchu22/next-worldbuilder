@@ -42,7 +42,12 @@
       "isInvalid": "is invalid",
       "isRequired": "is required",
       "emailRequired": "Email is required",
-      "passwordRequired": "Password is required"
+      "passwordRequired": "Password is required",
+      "signOut": "Sign Out"
     }
+  },
+  "dashboard": {
+    "titleProjects": "Projects",
+    "addProject": "Add Project"
   }
 }

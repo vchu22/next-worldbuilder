@@ -53,6 +53,7 @@ export function Providers({ children }: { children: ReactNode }) {
                 isRequired: tCommon('isRequired'),
                 emailRequired: tCommon('emailRequired'),
                 passwordRequired: tCommon('passwordRequired'),
+                signOut: tCommon('signOut'),
             }}
         >
             {children}
