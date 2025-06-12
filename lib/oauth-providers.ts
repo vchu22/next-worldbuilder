@@ -1,8 +1,12 @@
 import {SocialProvider} from "better-auth/social-providers";
 
-export const enabledOAuthProviders : SocialProvider[] = ["github", "google", "discord"];
+export const enabledOAuthProviders : SocialProvider[] = ["google", "discord", "twitch", "github"];
 
-const allProviderKeys = {
+type ProviderParams = {
+    [key: SocialProvider]: { clientId: string; clientSecret: string; [key: string]: string | number | boolean; };
+};
+
+const allProviderKeys: ProviderParams = {
     apple: {
         clientId: process.env.APPLE_CLIENT_ID as string,
         clientSecret: process.env.APPLE_CLIENT_SECRET as string,
@@ -49,11 +53,9 @@ const allProviderKeys = {
         clientId: process.env.TWITTER_CLIENT_ID as string,
         clientSecret: process.env.TWITTER_CLIENT_SECRET as string,
     },
-    socialProviders: {
-        dropbox: {
-            clientId: process.env.DROPBOX_CLIENT_ID as string,
-            clientSecret: process.env.DROPBOX_CLIENT_SECRET as string,
-        },
+    dropbox: {
+        clientId: process.env.DROPBOX_CLIENT_ID as string,
+        clientSecret: process.env.DROPBOX_CLIENT_SECRET as string,
     },
     linkedin: {
         clientId: process.env.LINKEDIN_CLIENT_ID as string,
@@ -87,12 +89,7 @@ const allProviderKeys = {
 }
 
 export const getProviderKeys = (providers: Array<string>) => {
-    const selectedProviders: {
-        [key: string]: {
-            clientId: string,
-            clientSecret: string,
-        }
-    } = {};
+    const selectedProviders: ProviderParams = {};
     for (const provider of providers) {
         selectedProviders[provider] = allProviderKeys[provider];
     }
