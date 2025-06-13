@@ -15,6 +15,7 @@ datasource db {
 }
 
 // Database Schema
+// Authentification Info
 model User {
   id            String    @id
   name          String
@@ -28,6 +29,8 @@ model User {
 
   @@unique([email])
   @@map("user")
+  UserSettings UserSettings[]
+  Projects Project[]
 }
 
 model Session {
@@ -73,4 +76,26 @@ model Verification {
   updatedAt  DateTime?
 
   @@map("verification")
+}
+
+// Account-specific Info
+model UserSettings {
+  id        String   @id @default(cuid())
+  userId    String   @unique
+  user      User     @relation(fields: [userId], references: [id])
+  theme     String?  // e.g., 'light', 'dark'
+  locale    String?  // e.g., 'en-us', 'es-mx'
+  @@map("user_settings")
+}
+
+model Project {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  imgBanner   String?
+  userId      String
+  user        User     @relation(fields: [userId], references: [id])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  @@map("project")
 }
