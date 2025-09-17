@@ -7,7 +7,21 @@ import { DropdownMenu, DropdownMenuRadioGroup, DropdownMenuContent, DropdownMenu
     DropdownMenuTrigger, DropdownMenuRadioItem } from "@/components/ui/dropdown-menu"
 
 const langLabels : { [key: string]: string } = {
+    "ar-ae": "العربية",
+    "de-de": "Deutsch",
     "en-us": "English",
+    "es-es": "Español",
+    "fr-fr": "Français",
+    "hi-in": "हिन्दी",
+    "ja-jp": "日本語",
+    "ko-kr": "한국어",
+    "pl-pl": "Polski",
+    "ru-ru": "Русский",
+    "th-th": "ไทย",
+    "tr-tr": "Türkçe",
+    "uk-ua": "Українська",
+    "vi-vn": "Tiếng Việt",
+    "zh-cn": "简体中文",
     "zh-tw": "中文繁體",
 }
 
@@ -35,7 +49,7 @@ export function LangDropdownMenu() {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <Button variant="outline" className="font-bold">{locale.toUpperCase()}</Button>
+                <Button variant="outline" className="font-bold">{langLabels[locale]}</Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56">
                 <DropdownMenuLabel>{t('language')}</DropdownMenuLabel>

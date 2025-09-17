@@ -1,0 +1,53 @@
+{
+  "component": {
+    "darkModeSwitch": {
+      "dark": "",
+      "light": ""
+    },
+    "langMenu": {
+      "language": ""
+    }
+  },
+  "home": {
+    "p1": "",
+    "getStarted": "",
+    "guide": ""
+  },
+  "auth": {
+    "signUpForm": {
+      "signUp": "",
+      "signUpDescription": "",
+      "name": "",
+      "signUpAction": "",
+      "alreadyHaveAnAccount": ""
+    },
+    "signInForm": {
+      "signIn": "",
+      "signInDescription": "",
+      "forgotPasswordLink": "",
+      "signInAction": "",
+      "orContinueWith": "",
+      "signInWith": "",
+      "dontHaveAnAccount": ""
+    },
+    "forgotPasswordForm": {
+      "forgotPassword": "",
+      "forgotPasswordDescription": "",
+      "forgotPasswordAction": "",
+      "goBack": ""
+    },
+    "common": {
+      "email": "",
+      "password": "",
+      "isInvalid": "",
+      "isRequired": "",
+      "emailRequired": "",
+      "passwordRequired": "",
+      "signOut": ""
+    }
+  },
+  "dashboard": {
+    "titleProjects": "",
+    "addProject": ""
+  }
+}
